@@ -36,4 +36,10 @@ public class LruEvictionPolicy<K> implements EvictionPolicy<K> {
         keySet.remove(evictedKey);
         return evictedKey;
     }
+
+    @Override
+    public void clear() {
+        accessOrder.clear();
+        keySet.clear();
+    }
 }

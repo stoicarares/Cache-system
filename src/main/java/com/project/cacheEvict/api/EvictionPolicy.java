@@ -4,4 +4,5 @@ public interface EvictionPolicy<K> {
     void keyAccessed(K key);
     void keyRemoved(K key);
     K getKeyToEvict();
+    void clear();
 }
